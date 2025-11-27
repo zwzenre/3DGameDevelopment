@@ -7,14 +7,19 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 120f;
 
+    [Header("Camera Look")]
+    public Transform cameraTransform;
+    public float mouseSensitivity = 300f;
+
+    private float xRotation = 0f;
+
     private Rigidbody rb;
     private Animator animator;
+    private bool isWalking;
 
-    private float moveInput;
-    private float turnInput;
+    private float VerticalInput;
+    private float HorizontalInput;
 
-    // Animator parameter name (create a Bool parameter with this name in your Animator)
-    private const string ANIM_IS_WALKING = "isWalking";
 
     private void Awake()
     {
@@ -23,20 +28,34 @@ public class PlayerController : MonoBehaviour
 
         if (rb != null)
             rb.interpolation = RigidbodyInterpolation.Interpolate;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
     {
-        // Read inputs in Update (more responsive)
-        moveInput = Input.GetAxis("Vertical");   // W/S or Up/Down
-        turnInput = Input.GetAxis("Horizontal"); // A/D or Left/Right
+        // ======== Movement Input ========
+        VerticalInput = Input.GetAxis("Vertical");
+        HorizontalInput = Input.GetAxis("Horizontal");
 
-        // Decide walking state (use a small threshold to avoid micro jitter)
-        bool isWalking = Mathf.Abs(moveInput) > 0.01f;
+        isWalking = Mathf.Abs(VerticalInput) > 0.01f || Mathf.Abs(HorizontalInput) > 0.01f;
+
 
         if (animator != null)
+            animator.SetBool("isWalking", isWalking);
+
+        // ======== Camera Look ========
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        transform.Rotate(Vector3.up * mouseX);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -70f, 70f);
+
+        if (cameraTransform != null)
         {
-            animator.SetBool(ANIM_IS_WALKING, isWalking);
+            cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         }
     }
 
@@ -44,13 +63,12 @@ public class PlayerController : MonoBehaviour
     {
         if (rb == null) return;
 
-        // Use Rigidbody rotation to compute forward direction (keeps things consistent)
-        Vector3 forward = rb.rotation * Vector3.forward;
-        Vector3 movement = forward * moveInput * speed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + movement);
+        Vector3 forward = rb.rotation * Vector3.forward * VerticalInput;
+        Vector3 right = rb.rotation * Vector3.right * HorizontalInput;
 
-        float turnAngle = turnInput * rotationSpeed * Time.fixedDeltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, turnAngle, 0f);
-        rb.MoveRotation(rb.rotation * turnRotation);
+        Vector3 movement = (forward + right).normalized * speed * Time.fixedDeltaTime;
+
+        rb.MovePosition(rb.position + movement);
     }
+
 }
