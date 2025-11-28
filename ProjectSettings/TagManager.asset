@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CinemachineTarget
   - Book
+  - FlashLight
+  - Pipe
   layers:
   - Default
   - TransparentFX
