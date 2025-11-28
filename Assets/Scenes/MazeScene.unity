@@ -9805,6 +9805,10 @@ PrefabInstance:
       value: Toy Flashlight (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7113663007202963739, guid: d7c91fe3bead89849936cb0b36bbcc82, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113663007202963739, guid: d7c91fe3bead89849936cb0b36bbcc82, type: 3}
       propertyPath: flashLight
       value: 
       objectReference: {fileID: 437116825}
@@ -16228,6 +16232,10 @@ PrefabInstance:
     - target: {fileID: 1839457345333996762, guid: d7c91fe3bead89849936cb0b36bbcc82, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113663007202963739, guid: d7c91fe3bead89849936cb0b36bbcc82, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
