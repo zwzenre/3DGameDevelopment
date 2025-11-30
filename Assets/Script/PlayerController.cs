@@ -38,11 +38,6 @@ public class PlayerController : MonoBehaviour
 
         mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        // Camera up/down
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -70f, 70f);
-        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
 
     private void FixedUpdate()
