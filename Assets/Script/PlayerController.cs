@@ -7,10 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
 
     [Header("Camera Look")]
-    public Transform cameraTransform;
     public float mouseSensitivity = 300f;
 
-    private float xRotation = 0f;
     private float mouseX;
     private Rigidbody rb;
     private Animator animator;
