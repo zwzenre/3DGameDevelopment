@@ -7,10 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
 
     [Header("Camera Look")]
-    public Transform cameraTransform;
     public float mouseSensitivity = 300f;
 
-    private float xRotation = 0f;
     private float mouseX;
     private Rigidbody rb;
     private Animator animator;
@@ -38,11 +36,6 @@ public class PlayerController : MonoBehaviour
 
         mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        // Camera up/down
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -70f, 70f);
-        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
 
     private void FixedUpdate()
