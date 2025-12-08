@@ -102,6 +102,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
       insertIndex: -1
       addedObject: {fileID: -7739371315578113611}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4514054496688238305}
   m_SourcePrefab: {fileID: 100100000, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
 --- !u!4 &53079240234368847 stripped
 Transform:
@@ -175,7 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 5
-  cameraTransform: {fileID: 0}
   mouseSensitivity: 300
 --- !u!65 &-7739371315578113611
 BoxCollider:
@@ -198,3 +200,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.9492699, z: 0.66698647}
   m_Center: {x: 0, y: 0.608223, z: 0.16650677}
+--- !u!114 &4514054496688238305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862232505324774901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c385c488c4191646aea09aaf3041317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
+  interactRange: 3
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 0
