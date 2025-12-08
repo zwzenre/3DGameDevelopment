@@ -16,12 +16,14 @@ public class GrabObject : MonoBehaviour
     {
         this.grabPointTransform = grabPointTransform;
         objectRb.useGravity = false;
+        objectRb.isKinematic = true;
     }
 
     public void Drop()
     {
         this.grabPointTransform = null;
         objectRb.useGravity = true;
+        objectRb.isKinematic = false;
     }
 
     private void FixedUpdate()
