@@ -1,36 +1,88 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PickupObject : MonoBehaviour
 {
     [SerializeField] Transform cameraTransform;
     [SerializeField] Transform grabPointTransform;
     [SerializeField] LayerMask pickupLayerMask;
-    float pickupDistance = 2.0f;
 
-    private GrabObject grabObject;
+    public PipeSlot pipeSlot = null;
+    float pickupDistance = 2f;
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            // If not grabbing object, try to grab one
-            if (grabObject == null)
+            InventoryItem selected = InventoryManager.instance.GetSelectedItem();
+
+            // NO ITEM HELD → try pickup
+            if (selected == null)
             {
-                if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit raycastHit, pickupDistance, pickupLayerMask))
-                {
-                    if (raycastHit.transform.TryGetComponent(out grabObject))
-                    {
-                        grabObject.Grab(grabPointTransform);
-                    }
-                }
+                TryPickup();
             }
             else
             {
-                // Carrying object
-                grabObject.Drop();
-                grabObject = null;
+                TryPlaceSelectedItem();
             }
-        }  
+        }
+    }
+
+    void TryPickup()
+    {
+        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward,
+            out RaycastHit hit, pickupDistance, pickupLayerMask))
+        {
+            PipeObject pipe = hit.transform.GetComponent<PipeObject>();
+
+            if (pipe != null)
+            {
+                InventoryItem newItem = new InventoryItem();
+                newItem.icon = pipe.inventoryIcon;
+                newItem.objectPrefab = pipe.pipeObject;
+
+                InventoryManager.instance.AddItem(newItem);
+                pipe.gameObject.SetActive(false);
+                pipe.LockPipe();
+            }
+        }
+    }
+
+    void TryPlaceSelectedItem()
+    {
+        InventoryItem item = InventoryManager.instance.GetSelectedItem();
+        if (item == null) return;
+
+        PipeSlot slot = pipeSlot;
+
+        if (slot == null)
+        {
+            Debug.Log("Player not in pipe slot");
+            return;
+        }
+
+        if (slot.isFilled)
+        {
+            Debug.Log("Slot already filled");
+            return;
+        }
+
+        if (slot.pipeObj.name != item.objectPrefab.name)
+        {
+            Debug.Log("Wrong pipe type");
+            return;
+        }
+
+        // Snap pipe into place
+        GameObject newPipe = Instantiate(item.objectPrefab, slot.snapPoint.position, slot.snapPoint.rotation);
+
+        PipeObject pipe = newPipe.GetComponent<PipeObject>();
+        pipe.LockPipe();
+        pipe.gameObject.SetActive(true);
+        slot.isFilled = true;
+
+        // Remove from inventory
+        InventoryManager.instance.RemoveSelectedItem();
+
+        Debug.Log("Pipe snapped!");
     }
 }

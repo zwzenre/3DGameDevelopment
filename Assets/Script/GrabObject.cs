@@ -4,12 +4,14 @@ public class GrabObject : MonoBehaviour
 {
     Rigidbody objectRb;
     Transform grabPointTransform;
+    Collider colliders;
     float lerpSpeed = 10.0f;
     Vector3 newPosition;
 
     private void Awake()
     {
         objectRb = GetComponent<Rigidbody>();
+        colliders = GetComponentInChildren<Collider>();
 
     }
     public void Grab(Transform grabPointTransform)
@@ -24,6 +26,15 @@ public class GrabObject : MonoBehaviour
         this.grabPointTransform = null;
         objectRb.useGravity = true;
         objectRb.isKinematic = false;
+    }
+
+    public void SnapTo(Transform snapPoint)
+    {
+        transform.position = snapPoint.position;
+        transform.rotation = snapPoint.rotation;
+
+        objectRb.useGravity = false;
+        objectRb.isKinematic = true;
     }
 
     private void FixedUpdate()
