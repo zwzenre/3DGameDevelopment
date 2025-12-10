@@ -15,7 +15,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Fire1"))
         {
             TryInteract();
         }
