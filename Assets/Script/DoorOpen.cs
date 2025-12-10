@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace NavKeypad
 {
-    public class SlidingDoor : MonoBehaviour
+    public class DoorOpen : MonoBehaviour
     {
         [SerializeField] private Animator anim;
-        public bool IsOpoen => isOpen;
+        public bool IsOpen => isOpen;
         private bool isOpen = false;
 
         public void ToggleDoor()
@@ -17,6 +17,7 @@ namespace NavKeypad
 
         public void OpenDoor()
         {
+            Debug.Log("OpenDoor called!");
             isOpen = true;
             anim.SetBool("isOpen", isOpen);
         }
@@ -25,5 +26,20 @@ namespace NavKeypad
             isOpen = false;
             anim.SetBool("isOpen", isOpen);
         }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                Debug.Log("O pressed!");
+                isOpen = true;
+                anim.SetBool("isOpen", isOpen);
+                Debug.Log("Bool sent to animator");
+            }
+        }
+
     }
+
+    
+
 }

@@ -41,6 +41,13 @@ public class PlayerInteract : MonoBehaviour
                 button.PressButton();
                 return;
             }
+
+            PosterInspect poster = hit.collider.GetComponent<PosterInspect>();
+            if (poster != null)
+            {
+                poster.OpenPoster();
+                return;
+            }
         }
     }
 }
