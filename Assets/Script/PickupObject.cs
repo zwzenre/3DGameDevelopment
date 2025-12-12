@@ -11,7 +11,7 @@ public class PickupObject : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButtonDown("Fire1"))
         {
             InventoryItem selected = InventoryManager.instance.GetSelectedItem();
 
@@ -79,6 +79,7 @@ public class PickupObject : MonoBehaviour
         pipe.LockPipe();
         pipe.gameObject.SetActive(true);
         slot.isFilled = true;
+        WaterManager.instance.OnPipeSnapped(slot);
 
         // Remove from inventory
         InventoryManager.instance.RemoveSelectedItem();
