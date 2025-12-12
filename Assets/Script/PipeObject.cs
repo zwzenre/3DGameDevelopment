@@ -12,7 +12,7 @@ public class PipeObject : MonoBehaviour
 
         rb.isKinematic = true;
         rb.useGravity = false;
-        col.enabled = false;
+        col.enabled = true;
         this.enabled = false;
     }
 }
