@@ -27,6 +27,7 @@ public class PosterInspect : MonoBehaviour
         // Lock player movement & look if you want:
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        
     }
 
     void ClosePoster()
