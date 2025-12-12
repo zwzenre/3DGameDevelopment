@@ -6,6 +6,10 @@ public class PipeSlot : MonoBehaviour
     public Transform snapPoint;
     public bool inCollider = false;
     public bool isFilled = false;
+
+    public PipeSlot nextSlot;
+
+    public Transform leakPoint;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
