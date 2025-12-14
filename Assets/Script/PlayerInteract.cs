@@ -48,6 +48,13 @@ public class PlayerInteract : MonoBehaviour
                 poster.OpenPoster();
                 return;
             }
+
+            RemotePickupTV tv = hit.collider.GetComponent<RemotePickupTV>();
+            if (tv != null)
+            {
+                tv.PickupRemote();
+                return;
+            }
         }
     }
 }
