@@ -39,6 +39,19 @@ public class InventoryManager : MonoBehaviour
         currentHeldObject = Instantiate(item.objectPrefab, grabPoint.position, grabPoint.rotation);
         currentHeldObject.SetActive(true);
         currentHeldObject.transform.SetParent(grabPoint, true);
+
+        Rigidbody rb = currentHeldObject.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.useGravity = false;
+        }
+
+        Collider col = currentHeldObject.GetComponent<Collider>();
+        if (col != null)
+        {
+            col.enabled = false;
+        }
     }
 
     public InventoryItem GetSelectedItem()
