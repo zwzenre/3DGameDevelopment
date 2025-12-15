@@ -8,8 +8,14 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera Look")]
     public float mouseSensitivity = 300f;
+    public Transform cameraRoot;
+    public float maxLookAngle = 80f;
 
     private float mouseX;
+    private float mouseY;
+    private float xRotation = 0f;
+
+
     private Rigidbody rb;
     private Animator animator;
     private Vector3 inputDirection;
@@ -35,7 +41,13 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isWalking", inputDirection.magnitude > 0.1f);
 
         mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -maxLookAngle, maxLookAngle);
+
+        cameraRoot.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+
     }
 
     private void FixedUpdate()
