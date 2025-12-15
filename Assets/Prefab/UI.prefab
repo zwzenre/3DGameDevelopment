@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 413236504925783315}
   - component: {fileID: 70900065766855627}
   - component: {fileID: 1670772398240195215}
+  - component: {fileID: 4698780868964994814}
   m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:00
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f2ee57e124e12d46a5c77adfd6ff2ca, type: 2}
   m_sharedMaterial: {fileID: -6531762103908807032, guid: 6f2ee57e124e12d46a5c77adfd6ff2ca, type: 2}
@@ -272,6 +273,35 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4698780868964994814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764996871563683027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c7484fc545f324cafc033270a05a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  startTime: 10
+  timerText: {fileID: 1670772398240195215}
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4698780868964994814}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4217507326807489724
 GameObject:
   m_ObjectHideFlags: 0
