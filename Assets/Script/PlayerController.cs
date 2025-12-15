@@ -3,10 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
-    [Header("Movement")]
     public float speed = 5f;
 
-    [Header("Camera Look")]
     public float mouseSensitivity = 300f;
     public Transform cameraRoot;
     public float maxLookAngle = 80f;
