@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PickupObject : MonoBehaviour
 {
@@ -7,7 +8,11 @@ public class PickupObject : MonoBehaviour
     [SerializeField] LayerMask pickupLayerMask;
 
     public PipeSlot pipeSlot = null;
-    float pickupDistance = 2f;
+    float pickupDistance = 5.0f;
+
+    [SerializeField] Transform flashlightHolder;
+    public FlashlightObject equippedFlashlight;
+    public Image flashlightImage;
 
     void Update()
     {
@@ -25,15 +30,22 @@ public class PickupObject : MonoBehaviour
                 TryPlaceSelectedItem();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (equippedFlashlight != null)
+            {
+                equippedFlashlight.Toggle();
+            }
+        }
     }
 
     void TryPickup()
     {
         if (Physics.Raycast(cameraTransform.position, cameraTransform.forward,
-            out RaycastHit hit, pickupDistance, pickupLayerMask))
+        out RaycastHit hit, pickupDistance, pickupLayerMask))
         {
             PipeObject pipe = hit.transform.GetComponent<PipeObject>();
-
             if (pipe != null)
             {
                 InventoryItem newItem = new InventoryItem();
@@ -42,10 +54,19 @@ public class PickupObject : MonoBehaviour
 
                 InventoryManager.instance.AddItem(newItem);
                 pipe.gameObject.SetActive(false);
-                pipe.LockPipe();
+                return;
+            }
+
+            FlashlightObject flashlight = hit.transform.GetComponent<FlashlightObject>();
+            if (flashlight != null && equippedFlashlight == null)
+            {
+                equippedFlashlight = flashlight;
+                flashlight.Equip(flashlightHolder);
+                flashlightImage.gameObject.SetActive(true);
             }
         }
     }
+
 
     void TryPlaceSelectedItem()
     {
@@ -76,8 +97,8 @@ public class PickupObject : MonoBehaviour
         GameObject newPipe = Instantiate(item.objectPrefab, slot.snapPoint.position, slot.snapPoint.rotation);
 
         PipeObject pipe = newPipe.GetComponent<PipeObject>();
-        pipe.LockPipe();
         pipe.gameObject.SetActive(true);
+        pipe.LockPipe();
         slot.isFilled = true;
         WaterManager.instance.OnPipeSnapped(slot);
 
@@ -85,5 +106,11 @@ public class PickupObject : MonoBehaviour
         InventoryManager.instance.RemoveSelectedItem();
 
         Debug.Log("Pipe snapped!");
+    }
+
+    void EquipFlashlight(FlashlightObject flashlight)
+    {
+        equippedFlashlight = flashlight;
+        flashlight.Equip(flashlightHolder);
     }
 }
