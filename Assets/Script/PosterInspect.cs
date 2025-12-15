@@ -1,8 +1,10 @@
 using UnityEngine;
+using StarterAssets;
 
 public class PosterInspect : MonoBehaviour
 {
     public GameObject posterUI;   // Assign your PosterZoomUI panel here
+    public FirstPersonController playerController;
 
     private bool isOpen = false;
 
@@ -23,7 +25,7 @@ public class PosterInspect : MonoBehaviour
     {
         posterUI.SetActive(true);
         isOpen = true;
-
+        playerController.enabled = false;
         // Lock player movement & look if you want:
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -34,7 +36,7 @@ public class PosterInspect : MonoBehaviour
     {
         posterUI.SetActive(false);
         isOpen = false;
-
+        playerController.enabled = true;
         // Unlock player back:
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
