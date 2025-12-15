@@ -3940,6 +3940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4338060786505975693, guid: 0dc68aa36f5735b4d8b34bc3bb7b983a, type: 3}
+      propertyPath: gameBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c837b5993516bd44b4c942f373a81d7, type: 3}
     - target: {fileID: 5928420669930139328, guid: 0dc68aa36f5735b4d8b34bc3bb7b983a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 457.16388
@@ -5359,6 +5363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PosterInspect
   posterUI: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1 &2111003989
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CutScene.unity
     guid: a262f747927c7d94b8b1efd286757115
   - enabled: 1
-    path: Assets/Scenes/Room.unity
+    path: Assets/Scenes/RoomScene.unity
     guid: 1deb2e5f3411082479eb214bce658cbc
   - enabled: 1
     path: Assets/Scenes/MazeScene.unity
