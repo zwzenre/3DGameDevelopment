@@ -1,31 +1,33 @@
 using UnityEngine;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public int booksCollected = 0;
-    public int totalBooks = 10;
-
-    public TextMeshProUGUI text;     // Assign in Inspector
-    public Transform bookResetParent; // A hidden empty object where books reset to
+    public GameObject player;   
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
     }
 
-    public void AddBook(Book book)
+    private void Start()
     {
-        booksCollected++;
+        EnablePlayer();
+    }
 
-        // Update UI text
-        text.text = $"{booksCollected}/{totalBooks} books collected";
-
-        // Reset book position to original parent (hidden)
-        book.transform.SetParent(bookResetParent);
-        book.transform.localPosition = Vector3.zero;
+    public void EnablePlayer()
+    {
+        if (player != null)
+        {
+            player.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("Player not assigned in GameManager!");
+        }
     }
 }
