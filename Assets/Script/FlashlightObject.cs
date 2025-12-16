@@ -3,7 +3,7 @@ using UnityEngine;
 public class FlashlightObject : MonoBehaviour
 {
     public Light flashlight;
-    private bool isOn = true;
+    private bool isOn = false;
 
     public void Equip(Transform holder)
     {
