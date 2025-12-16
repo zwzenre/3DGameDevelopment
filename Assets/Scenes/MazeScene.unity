@@ -3468,7 +3468,7 @@ GameObject:
   - component: {fileID: 170552221}
   - component: {fileID: 170552222}
   - component: {fileID: 170552223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PipeSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12091,7 +12091,9 @@ PrefabInstance:
       value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3701800517003083595, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
+    - {fileID: 6245801642576686321, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 53079240234368847, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
       insertIndex: -1
@@ -12536,7 +12538,7 @@ GameObject:
   - component: {fileID: 468678114}
   - component: {fileID: 468678115}
   - component: {fileID: 468678116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PipeSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20532,7 +20534,7 @@ GameObject:
   - component: {fileID: 907905212}
   - component: {fileID: 907905213}
   - component: {fileID: 907905214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PipeSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21626,7 +21628,7 @@ GameObject:
   - component: {fileID: 953734874}
   - component: {fileID: 953734875}
   - component: {fileID: 953734876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PipeSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22373,7 +22375,7 @@ GameObject:
   - component: {fileID: 989019378}
   - component: {fileID: 989019379}
   - component: {fileID: 989019380}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PipeSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
