@@ -8,7 +8,7 @@ public class PickupObject : MonoBehaviour
     [SerializeField] LayerMask pickupLayerMask;
 
     public PipeSlot pipeSlot = null;
-    float pickupDistance = 5.0f;
+    float pickupDistance = 2.0f;
 
     [SerializeField] Transform flashlightHolder;
     public FlashlightObject equippedFlashlight;
@@ -16,6 +16,8 @@ public class PickupObject : MonoBehaviour
 
     void Update()
     {
+        CheckForInteractable();
+
         if (Input.GetButtonDown("Fire1"))
         {
             InventoryItem selected = InventoryManager.instance.GetSelectedItem();
@@ -39,6 +41,31 @@ public class PickupObject : MonoBehaviour
             }
         }
     }
+
+    void CheckForInteractable()
+    {
+        if (Physics.Raycast(
+            cameraTransform.position,
+            cameraTransform.forward,
+            out RaycastHit hit,
+            pickupDistance,
+            pickupLayerMask))
+        {
+            PipeSlot slot = hit.collider.GetComponent<PipeSlot>();
+
+            if (slot && slot.isFilled)
+            {
+                Interactable.Instance.Hide();
+                return;
+            }
+
+            Interactable.Instance.Show();
+            return;
+        }
+
+        Interactable.Instance.Hide();
+    }
+
 
     void TryPickup()
     {
@@ -66,7 +93,6 @@ public class PickupObject : MonoBehaviour
             }
         }
     }
-
 
     void TryPlaceSelectedItem()
     {
