@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using NavKeypad;
 using TMPro;
 
@@ -9,7 +10,7 @@ public class PlayerInteract : MonoBehaviour
     public TMP_Text interactText;
     public AudioSource audioSource;
     public AudioClip interactSound;
-
+    public static PlayerInteract Instance;
     private Camera cam;
 
     private void Start()
@@ -69,6 +70,22 @@ public class PlayerInteract : MonoBehaviour
                 tv.PickupRemote();
                 return;
             }
+
+            PickupObject pipe = hit.transform.GetComponent<PickupObject>();
+            if (pipe != null)
+            {
+                PlayInteractSound();
+                pipe.TryPickup();
+                return;
+            }
+
+            PickupObject flashlight = hit.transform.GetComponent<PickupObject>();
+            if (flashlight != null)
+            {
+                PlayInteractSound();
+                flashlight.TryPickup();
+                return;
+            }
         }
     }
 
@@ -120,8 +137,36 @@ public class PlayerInteract : MonoBehaviour
                 ShowText("Remote");
                 return;
             }
+
+            if (hit.collider.GetComponent<FlashlightObject>())
+            {
+                ShowText("Flashlight");
+                return;
+            }
+
+            if (hit.collider.GetComponent<PipeObject>())
+            {
+                ShowText("Pipe");
+                return;
+            }
         }
 
         HideText();
+    }
+
+    void Awake()
+    {
+        Instance = this;
+        Hide();
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }

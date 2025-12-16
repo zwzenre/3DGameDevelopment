@@ -67,7 +67,7 @@ public class PickupObject : MonoBehaviour
     }
 
 
-    void TryPickup()
+    public void TryPickup()
     {
         if (Physics.Raycast(cameraTransform.position, cameraTransform.forward,
         out RaycastHit hit, pickupDistance, pickupLayerMask))
