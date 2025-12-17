@@ -17,22 +17,35 @@ public class PauseManager : MonoBehaviour
 
     void TogglePause()
     {
-        isPaused = !isPaused;
-        pausePanel.SetActive(isPaused);
+       isPaused = !isPaused;
+       pausePanel.SetActive(isPaused);
 
-        Time.timeScale = isPaused ? 0f : 1f;
-        Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = isPaused;
+       if (isPaused )
+       {
+            OnPauseClick();
+       }
+       else
+       {
+            OnResumeClick();
+       }
+       Time.timeScale = isPaused ? 0f : 1f;
+       Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+       Cursor.visible = isPaused;
     }
 
-    public void OnButtonClick()
+    public void OnPauseClick()
     {
-        AudioManager.instance.PlayButtonClick();
+        AudioManager.instance.PlayPauseSound();
+    }
+
+    public void OnResumeClick()
+    {
+        AudioManager.instance.PlayResumeSound();
     }
 
     public void Resume()
     {
-        OnButtonClick();
+        OnResumeClick();
         isPaused = false;
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
@@ -42,7 +55,7 @@ public class PauseManager : MonoBehaviour
 
     public void QuitToMenu()
     {
-        OnButtonClick();
+        OnResumeClick();
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }

@@ -8,8 +8,6 @@ public class PlayerInteract : MonoBehaviour
     public float interactRange = 3f;
     public LayerMask interactLayer;
     public TMP_Text interactText;
-    public AudioSource audioSource;
-    public AudioClip interactSound;
     public static PlayerInteract Instance;
     private Camera cam;
 
@@ -89,12 +87,9 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    private void PlayInteractSound()
+    public void PlayInteractSound()
     {
-        if (audioSource != null && interactSound != null)
-        {
-            audioSource.PlayOneShot(interactSound);
-        }
+        AudioManager.instance.PlayInteractSound();
     }
 
     private void ShowText(string text)
