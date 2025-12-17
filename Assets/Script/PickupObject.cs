@@ -74,6 +74,7 @@ public class PickupObject : MonoBehaviour
             PipeObject pipe = hit.transform.GetComponent<PipeObject>();
             if (pipe != null)
             {
+                PlayInteractSound();
                 InventoryItem newItem = new InventoryItem();
                 newItem.icon = pipe.inventoryIcon;
                 newItem.objectPrefab = pipe.pipeObject;
@@ -86,6 +87,7 @@ public class PickupObject : MonoBehaviour
             FlashlightObject flashlight = hit.transform.GetComponent<FlashlightObject>();
             if (flashlight != null && equippedFlashlight == null)
             {
+                PlayInteractSound();
                 equippedFlashlight = flashlight;
                 flashlight.Equip(flashlightHolder);
                 flashlightImage.gameObject.SetActive(true);
@@ -126,7 +128,7 @@ public class PickupObject : MonoBehaviour
         pipe.LockPipe();
         slot.isFilled = true;
         WaterManager.instance.OnPipeSnapped(slot);
-
+        PlayPipeSound();
         // Remove from inventory
         InventoryManager.instance.RemoveSelectedItem();
 
@@ -137,5 +139,15 @@ public class PickupObject : MonoBehaviour
     {
         equippedFlashlight = flashlight;
         flashlight.Equip(flashlightHolder);
+    }
+
+    public void PlayInteractSound()
+    {
+        AudioManager.instance.PlayInteractSound();
+    }
+
+    public void PlayPipeSound()
+    {
+        AudioManager.instance.PlayPipeSound();
     }
 }
