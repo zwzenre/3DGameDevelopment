@@ -34,11 +34,4 @@ public class SettingManager : MonoBehaviour
         OnButtonClick();
         SceneManager.LoadScene("Menu");
     }
-
-    public void QuitGame()
-    {
-        OnButtonClick();
-        Debug.Log("Quit pressed!");
-        Application.Quit();
-    }
 }

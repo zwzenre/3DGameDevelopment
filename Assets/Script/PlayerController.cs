@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
 public class PlayerController : MonoBehaviour
@@ -18,6 +19,13 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Vector3 inputDirection;
 
+    private bool isMazeScene;
+
+    public float footstepInterval = 2.0f;
+    private float footstepTimer;
+
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -27,6 +35,8 @@ public class PlayerController : MonoBehaviour
         rb.interpolation = RigidbodyInterpolation.Interpolate;
 
         Cursor.lockState = CursorLockMode.Locked;
+        isMazeScene = SceneManager.GetActiveScene().name == "MazeScene";
+
     }
 
     private void Update()
@@ -50,15 +60,33 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // ======== Movement ========
         if (inputDirection.sqrMagnitude > 0.01f)
         {
             Vector3 moveDir = transform.TransformDirection(inputDirection) * speed;
             rb.MovePosition(rb.position + moveDir * Time.fixedDeltaTime);
+
+            footstepTimer -= Time.fixedDeltaTime;
+            if (footstepTimer <= 0f)
+            {
+                PlayFootstepSound();
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f;
         }
 
-        // ======== Rotation ========
         Quaternion deltaRotation = Quaternion.Euler(0f, mouseX, 0f);
         rb.MoveRotation(rb.rotation * deltaRotation);
+    }
+
+
+    public void PlayFootstepSound()
+    {
+        if (isMazeScene)
+            AudioManager.instance.PlayWalkingOnSnowSound();
+        else
+            AudioManager.instance.PlayWalkingSound();
     }
 }

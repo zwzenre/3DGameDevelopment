@@ -11,7 +11,16 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip menuBGM;
     public AudioClip gameBGM;
+
     public AudioClip buttonClickSFX;
+    public AudioClip interactSFX;
+    public AudioClip gameOverSFX;
+    public AudioClip gameWinSFX;
+    public AudioClip pauseSFX;
+    public AudioClip resumeSFX;
+    public AudioClip pipeSFX;
+    public AudioClip walkingSFX;
+    public AudioClip walkingOnSnowSFX;
 
     private void Awake()
     {
@@ -52,5 +61,45 @@ public class AudioManager : MonoBehaviour
     public void PlayButtonClick()
     {
         PlaySFX(buttonClickSFX);
+    }
+
+    public void PlayInteractSound()
+    {
+        PlaySFX(interactSFX);
+    }
+
+    public void PlayGameOverSound()
+    {
+        PlaySFX(gameOverSFX);
+    }
+
+    public void PlayGameWinSound()
+    {
+        PlaySFX(gameWinSFX);
+    }
+
+    public void PlayPauseSound()
+    {
+        PlaySFX(pauseSFX);
+    }
+
+    public void PlayResumeSound()
+    {
+        PlaySFX(resumeSFX);
+    }
+
+    public void PlayPipeSound()
+    {
+        PlaySFX(pipeSFX);
+    }
+
+    public void PlayWalkingSound()
+    {
+        PlaySFX(walkingSFX);
+    }
+
+    public void PlayWalkingOnSnowSound()
+    {
+        PlaySFX(walkingOnSnowSFX);
     }
 }

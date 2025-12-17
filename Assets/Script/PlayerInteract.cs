@@ -8,8 +8,6 @@ public class PlayerInteract : MonoBehaviour
     public float interactRange = 3f;
     public LayerMask interactLayer;
     public TMP_Text interactText;
-    public AudioSource audioSource;
-    public AudioClip interactSound;
     public static PlayerInteract Instance;
     private Camera cam;
 
@@ -86,15 +84,20 @@ public class PlayerInteract : MonoBehaviour
                 flashlight.TryPickup();
                 return;
             }
+
+            Bottle bottle = hit.collider.GetComponent<Bottle>();
+            if (bottle != null)
+            {
+                PlayInteractSound();
+                bottle.Collect();
+                return;
+            }
         }
     }
 
-    private void PlayInteractSound()
+    public void PlayInteractSound()
     {
-        if (audioSource != null && interactSound != null)
-        {
-            audioSource.PlayOneShot(interactSound);
-        }
+        AudioManager.instance.PlayInteractSound();
     }
 
     private void ShowText(string text)
@@ -147,6 +150,12 @@ public class PlayerInteract : MonoBehaviour
             if (hit.collider.GetComponent<PipeObject>())
             {
                 ShowText("Pipe");
+                return;
+            }
+
+            if (hit.collider.GetComponent<Bottle>())
+            {
+                ShowText("Bottle");
                 return;
             }
         }
