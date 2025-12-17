@@ -84,6 +84,14 @@ public class PlayerInteract : MonoBehaviour
                 flashlight.TryPickup();
                 return;
             }
+
+            Bottle bottle = hit.collider.GetComponent<Bottle>();
+            if (bottle != null)
+            {
+                PlayInteractSound();
+                bottle.Collect();
+                return;
+            }
         }
     }
 
@@ -142,6 +150,12 @@ public class PlayerInteract : MonoBehaviour
             if (hit.collider.GetComponent<PipeObject>())
             {
                 ShowText("Pipe");
+                return;
+            }
+
+            if (hit.collider.GetComponent<Bottle>())
+            {
+                ShowText("Bottle");
                 return;
             }
         }
