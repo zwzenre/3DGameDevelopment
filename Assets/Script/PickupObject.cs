@@ -8,7 +8,7 @@ public class PickupObject : MonoBehaviour
     [SerializeField] LayerMask pickupLayerMask;
 
     public PipeSlot pipeSlot = null;
-    float pickupDistance = 2.0f;
+    float pickupDistance = 3.0f;
 
     [SerializeField] Transform flashlightHolder;
     public FlashlightObject equippedFlashlight;
@@ -22,7 +22,6 @@ public class PickupObject : MonoBehaviour
         {
             InventoryItem selected = InventoryManager.instance.GetSelectedItem();
 
-            // NO ITEM HELD → try pickup
             if (selected == null)
             {
                 TryPickup();
