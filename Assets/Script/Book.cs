@@ -7,7 +7,10 @@ public class Book : MonoBehaviour
 
     public TMP_Text bookCountText;
 
-    private static int currentBooks = 0; 
+    public Color normalColor = Color.white;
+    public Color maxColor = Color.green;
+
+    private static int currentBooks = 0;
     private bool collected = false;
 
     private void Start()
@@ -34,9 +37,17 @@ public class Book : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (bookCountText != null)
+        if (bookCountText == null) return;
+
+        bookCountText.text = $"Books: {currentBooks}";
+
+        if (currentBooks >= maxBooks)
         {
-            bookCountText.text = $"Books: {currentBooks}";
+            bookCountText.color = maxColor;
+        }
+        else
+        {
+            bookCountText.color = normalColor;
         }
     }
 

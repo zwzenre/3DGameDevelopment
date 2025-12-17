@@ -9,14 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 6c50630a042790b4fb5b85c92fe7fe96
   - enabled: 1
+    path: Assets/Scenes/CutScene.unity
+    guid: 710d41e8463464647806aa3cde562c47
+  - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 87320c577023c454c9a4de51b3ce3672
   - enabled: 1
-    path: Assets/Scenes/CutScene.unity
-    guid: a262f747927c7d94b8b1efd286757115
-  - enabled: 1
     path: Assets/Scenes/RoomScene.unity
     guid: 1deb2e5f3411082479eb214bce658cbc
+  - enabled: 0
+    path: Assets/Scenes/BackupCutScene.unity
+    guid: a262f747927c7d94b8b1efd286757115
   - enabled: 1
     path: Assets/Scenes/MazeScene.unity
     guid: de4fd5fc2931a1a4da0e8a35c0310daa
