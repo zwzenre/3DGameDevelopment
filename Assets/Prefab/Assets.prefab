@@ -2799,16 +2799,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 136.217
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -419988822731580472, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4910683256106240385, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6695771375673690710}
   m_SourcePrefab: {fileID: 100100000, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
 --- !u!4 &7858418994237199035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5797813827793005747, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
   m_PrefabInstance: {fileID: 4430220994954919432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8745162417470191497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4910683256106240385, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
+  m_PrefabInstance: {fileID: 4430220994954919432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6695771375673690710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745162417470191497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Book
+  maxBooks: 8
+  bookCountText: {fileID: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1001 &4439932756242814292
 PrefabInstance:
   m_ObjectHideFlags: 0
