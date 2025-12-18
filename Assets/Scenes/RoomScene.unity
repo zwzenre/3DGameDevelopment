@@ -3146,6 +3146,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1001 &1314517672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183655547918474081, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8230279294367527083, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
+      propertyPath: m_Name
+      value: Books
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f404576c01ed10f4796c14e0823d69a3, type: 3}
 --- !u!1 &1360921277
 GameObject:
   m_ObjectHideFlags: 0
@@ -4384,10 +4441,6 @@ PrefabInstance:
       propertyPath: bookCountText
       value: 
       objectReference: {fileID: 981199049}
-    - target: {fileID: 5138792862836647360, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
-      propertyPath: bookCountText
-      value: 
-      objectReference: {fileID: 981199049}
     - target: {fileID: 5622217322543854743, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
       propertyPath: bookCountText
       value: 
@@ -4400,6 +4453,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1714144688}
+    - target: {fileID: 6695771375673690710, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
+      propertyPath: bookCountText
+      value: 
+      objectReference: {fileID: 981199049}
     - target: {fileID: 7229802328619846301, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
       propertyPath: bottleCountText
       value: 
@@ -4778,3 +4835,4 @@ SceneRoots:
   - {fileID: 1561254601}
   - {fileID: 864193885}
   - {fileID: 80683509}
+  - {fileID: 1314517672}
