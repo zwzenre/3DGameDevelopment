@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
             currentTime -= Time.deltaTime;
             UpdateUI();
         }
-        else
+        else if(currentTime <= 0 && isRunning)
         {
             currentTime = 0;
             isRunning = false;
