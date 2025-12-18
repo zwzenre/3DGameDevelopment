@@ -3995,7 +3995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b0e5fecfe704b45a33f0a1172b79c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManeger
-  sceneToLoad: RoomScene
+  sceneToLoad: CutScene
 --- !u!114 &1475228993
 MonoBehaviour:
   m_ObjectHideFlags: 0
