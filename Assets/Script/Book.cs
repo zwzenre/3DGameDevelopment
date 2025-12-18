@@ -55,4 +55,9 @@ public class Book : MonoBehaviour
     {
         return currentBooks;
     }
+
+    void Awake()
+    {
+        currentBooks = 0;
+    }
 }

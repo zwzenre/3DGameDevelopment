@@ -54,4 +54,9 @@ public class Bottle : MonoBehaviour
     {
         return currentBottles;
     }
+
+    void Awake()
+    {
+        currentBottles = 0;
+    }
 }

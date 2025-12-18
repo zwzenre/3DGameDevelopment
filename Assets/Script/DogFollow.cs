@@ -7,7 +7,7 @@ public class DogFollow : MonoBehaviour
     public float followDistance = 1.5f;
     public float runSpeed = 5f;
     public float walkSpeed = 2f;
-
+    bool canFollow = true;
     private NavMeshAgent agent;
     private Animator animator;
     private float wiggleTimer;
@@ -22,12 +22,19 @@ public class DogFollow : MonoBehaviour
 
     void Update()
     {
+        if (!canFollow)
+        {
+            // FORCE idle + wiggle only
+            animator.SetFloat("Speed", 0f);
+            animator.SetBool("Wiggle", true);
+            return;
+        }
+
         float distance = Vector3.Distance(transform.position, player.position);
 
         if (distance > followDistance)
         {
             agent.SetDestination(player.position);
-
             agent.speed = distance > 4f ? runSpeed : walkSpeed;
         }
         else
@@ -35,11 +42,11 @@ public class DogFollow : MonoBehaviour
             agent.ResetPath();
         }
 
-        // Speed → animation
-        animator.SetFloat("Speed", agent.velocity.magnitude);
+        float speed = agent.velocity.magnitude;
+        animator.SetFloat("Speed", speed);
 
-        // Random tail wiggle when idle
-        if (agent.velocity.magnitude < 0.1f)
+        // Tail wiggle logic (only when following)
+        if (speed < 0.1f)
         {
             wiggleTimer += Time.deltaTime;
 
@@ -54,5 +61,18 @@ public class DogFollow : MonoBehaviour
             animator.SetBool("Wiggle", false);
             wiggleTimer = 0f;
         }
+    }
+
+
+    public void StopFollowing()
+    {
+        canFollow = false;
+
+        agent.isStopped = true;
+        agent.ResetPath();
+        agent.velocity = Vector3.zero;
+
+        animator.SetFloat("Speed", 0f);
+        animator.SetBool("Wiggle", true);
     }
 }
