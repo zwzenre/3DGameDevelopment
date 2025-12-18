@@ -29,14 +29,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5270709962020376535}
-  - {fileID: 622507061781350416}
-  - {fileID: 9105608815067493984}
-  - {fileID: 7590196518044350100}
-  - {fileID: 7959264381234362689}
-  - {fileID: 5016284119171983141}
+  - {fileID: 1633548950257648756}
+  - {fileID: 8523264785526098175}
+  - {fileID: 5761078218814746391}
+  - {fileID: 8955837733313085391}
+  - {fileID: 5900695024835121226}
   - {fileID: 8966626435970338075}
   - {fileID: 7217656196877738227}
+  - {fileID: 6281760663780049843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2271660191768527780
@@ -102,37 +102,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7435322540085385402, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 225852649031847883}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
---- !u!4 &7590196518044350100 stripped
+--- !u!4 &5761078218814746391 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8562263648292238640, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5797813827793005747, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
   m_PrefabInstance: {fileID: 2271660191768527780}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8694512013381786398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7435322540085385402, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
-  m_PrefabInstance: {fileID: 2271660191768527780}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &225852649031847883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8694512013381786398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1001 &4467856968246597106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -197,37 +173,13 @@ PrefabInstance:
     - {fileID: -419988822731580472, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4910683256106240385, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6887800635372478892}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
---- !u!4 &7959264381234362689 stripped
+--- !u!4 &8955837733313085391 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5797813827793005747, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4776211210057935421, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
   m_PrefabInstance: {fileID: 4467856968246597106}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8802079153936161907 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4910683256106240385, guid: f8cb3751110c8954f824e749765b65ae, type: 3}
-  m_PrefabInstance: {fileID: 4467856968246597106}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6887800635372478892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8802079153936161907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1001 &4478647268582254374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381,35 +333,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1177386386556385320, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1398529055258417163}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
---- !u!1 &3364592748416976518 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1177386386556385320, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
-  m_PrefabInstance: {fileID: 4532738785899527854}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1398529055258417163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3364592748416976518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
---- !u!4 &5270709962020376535 stripped
+--- !u!4 &6281760663780049843 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8629696376780583289, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7623127298917334301, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
   m_PrefabInstance: {fileID: 4532738785899527854}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4876514139572070063
@@ -565,35 +493,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7026325396102275679, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5583454622658486125}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
---- !u!1 &2608344286002305939 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7026325396102275679, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
-  m_PrefabInstance: {fileID: 5021574016954874316}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5583454622658486125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2608344286002305939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
---- !u!4 &9105608815067493984 stripped
+--- !u!4 &8523264785526098175 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4318292403320410028, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3744900168085680435, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
   m_PrefabInstance: {fileID: 5021574016954874316}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7019246207518815501
@@ -659,37 +563,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 981898177430354236, guid: badf434b398425d409c33366d6cfa511, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7690035119826254713}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: badf434b398425d409c33366d6cfa511, type: 3}
---- !u!4 &622507061781350416 stripped
+--- !u!4 &1633548950257648756 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7623127298917334301, guid: badf434b398425d409c33366d6cfa511, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8629696376780583289, guid: badf434b398425d409c33366d6cfa511, type: 3}
   m_PrefabInstance: {fileID: 7019246207518815501}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7838858254120406065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 981898177430354236, guid: badf434b398425d409c33366d6cfa511, type: 3}
-  m_PrefabInstance: {fileID: 7019246207518815501}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7690035119826254713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7838858254120406065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1001 &8531476894760162838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -753,34 +633,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6203253123535827630, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4237392836674942522}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
---- !u!1 &2338358665684100280 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6203253123535827630, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
-  m_PrefabInstance: {fileID: 8531476894760162838}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4237392836674942522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2338358665684100280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
---- !u!4 &5016284119171983141 stripped
+--- !u!4 &5900695024835121226 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3744900168085680435, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2848139547686438492, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
   m_PrefabInstance: {fileID: 8531476894760162838}
   m_PrefabAsset: {fileID: 0}
