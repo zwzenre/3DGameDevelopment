@@ -1,12 +1,22 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class MenuManager : MonoBehaviour
 {
     public string sceneToLoad;
+
+    public Image fadeImage;
+    public float fadeDuration = 1f;
+
+    private bool isLoading = false;
+
     private void Start()
     {
         AudioManager.instance.PlayMenuBGM();
+
+        fadeImage.color = new Color(0, 0, 0, 0);
     }
 
     public void OnButtonClick()
@@ -16,8 +26,11 @@ public class MenuManager : MonoBehaviour
 
     public void OnStartGame()
     {
-        OnButtonClick(); 
-        SceneManager.LoadScene(sceneToLoad);
+        OnButtonClick();
+        if (!isLoading)
+        {
+            StartCoroutine(LoadSceneWithFadeOut());
+        }
     }
 
     public void OnSettings()
@@ -30,5 +43,23 @@ public class MenuManager : MonoBehaviour
     {
         OnButtonClick();
         Application.Quit();
+    }
+
+    IEnumerator FadeOut()
+    {
+        float alpha = 0f;
+        while (alpha < 1f)
+        {
+            alpha += Time.deltaTime / fadeDuration;
+            fadeImage.color = new Color(0, 0, 0, alpha);
+            yield return null;
+        }
+    }
+
+    IEnumerator LoadSceneWithFadeOut()
+    {
+        isLoading = true;
+        yield return StartCoroutine(FadeOut());
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
