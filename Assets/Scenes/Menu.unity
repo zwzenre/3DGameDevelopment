@@ -1156,7 +1156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NavKeypad.DoorOpen
   anim: {fileID: 279618340}
-  portalTrigger: {fileID: 0}
 --- !u!1 &343594255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f6a50b8af342a3343b30013a8e720b1d, type: 3}
