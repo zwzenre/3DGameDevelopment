@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5e2374e44cd26bd4ba6873c8a51d0bbf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.416
+      value: -2.297
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5e2374e44cd26bd4ba6873c8a51d0bbf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5e2374e44cd26bd4ba6873c8a51d0bbf, type: 3}
+      propertyPath: m_TagString
+      value: Pipe
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89,6 +93,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e2374e44cd26bd4ba6873c8a51d0bbf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1605822538276795670}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e2374e44cd26bd4ba6873c8a51d0bbf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6930372707302886751}
   m_SourcePrefab: {fileID: 100100000, guid: 5e2374e44cd26bd4ba6873c8a51d0bbf, type: 3}
 --- !u!1 &1989539535866128954 stripped
 GameObject:
@@ -158,3 +165,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6930372707302886751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989539535866128954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46bc770d37b627a49ba42d9ac82b0be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pipe
+  maxPipes: 5
+  pipeCountText: {fileID: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  maxColor: {r: 0, g: 1, b: 0, a: 1}

@@ -1,55 +1,118 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 using System.Collections;
 
 public class CutScene : MonoBehaviour
 {
-    public string sceneToLoad;
+    [Header("Timeline")]
+    public PlayableDirector playableDirector;
 
+    [Header("Fade")]
     public Image fadeImage;
     public float fadeDuration = 1f;
 
-    private bool isLoading = false;
+    [Header("Win Menu")]
+    public WinMenu winMenu;
 
-    private void Start()
+    private bool hasEnded = false;
+    private bool isSkipping = false;
+    public GameObject skipHintUI;
+
+    void Start()
     {
         AudioManager.instance.PlayGameBGM();
 
-        fadeImage.color = new Color(0, 0, 0, 0);
-    }
+        // Start fully black
+        fadeImage.color = new Color(0, 0, 0, 1f);
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && !isLoading)
+        // Fade in
+        StartCoroutine(FadeIn());
+
+        // Listen for timeline end
+        if (playableDirector != null)
         {
-            nextScene();
+            playableDirector.stopped += OnTimelineEnd;
+            playableDirector.Play();
         }
     }
 
-    public void nextScene()
+    void Update()
     {
-        if (!isLoading)
+        if (hasEnded) return;
+
+        // SPACE to skip cutscene
+        if (Input.GetKeyDown(KeyCode.Space) && !hasEnded && !isSkipping)
         {
-            StartCoroutine(LoadSceneWithFadeOut());
+            SkipCutscene();
         }
     }
 
-    IEnumerator FadeOut()
+    void OnDestroy()
     {
-        float alpha = 0f;
-        while (alpha < 1f)
+        if (playableDirector != null)
         {
-            alpha += Time.deltaTime / fadeDuration;
+            playableDirector.stopped -= OnTimelineEnd;
+        }
+    }
+
+    void OnTimelineEnd(PlayableDirector director)
+    {
+        if (hasEnded) return;
+        hasEnded = true;
+
+        StartCoroutine(FadeOutAndShowWinMenu());
+    }
+
+    void SkipCutscene()
+    {
+        isSkipping = true;
+
+        if (playableDirector != null)
+            playableDirector.Stop();
+
+        StartCoroutine(FadeOutAndShowWinMenu());
+    }
+
+    IEnumerator FadeIn()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, elapsed / fadeDuration);
             fadeImage.color = new Color(0, 0, 0, alpha);
             yield return null;
         }
+
+        fadeImage.color = new Color(0, 0, 0, 0f);
     }
 
-    IEnumerator LoadSceneWithFadeOut()
+    IEnumerator FadeOutAndShowWinMenu()
     {
-        isLoading = true;
-        yield return StartCoroutine(FadeOut());
-        SceneManager.LoadScene(sceneToLoad);
+        hasEnded = true;
+
+        if (skipHintUI != null)
+            skipHintUI.SetActive(false);
+        
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Lerp(0f, 1f, elapsed / fadeDuration);
+            fadeImage.color = new Color(0, 0, 0, alpha);
+            yield return null;
+        }
+
+        fadeImage.color = new Color(0, 0, 0, 1f);
+
+        yield return new WaitForSecondsRealtime(0.3f);
+
+        if (winMenu != null)
+        {
+            winMenu.ShowWinMenu();
+        }
     }
 }

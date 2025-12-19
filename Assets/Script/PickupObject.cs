@@ -74,7 +74,13 @@ public class PickupObject : MonoBehaviour
             PipeObject pipe = hit.transform.GetComponent<PipeObject>();
             if (pipe != null)
             {
+                if (Pipe.instance != null)
+                {
+                    Pipe.instance.AddPipe();
+                }
+
                 PlayInteractSound();
+
                 InventoryItem newItem = new InventoryItem();
                 newItem.icon = pipe.inventoryIcon;
                 newItem.objectPrefab = pipe.pipeObject;
