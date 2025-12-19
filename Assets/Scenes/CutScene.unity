@@ -970,7 +970,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2110108556647612326, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
       propertyPath: m_Name
-      value: Assets (1)
+      value: Assets
       objectReference: {fileID: 0}
     - target: {fileID: 3304996167007518211, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
       propertyPath: m_IsActive
@@ -1809,7 +1809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7194921831242375612, guid: 5b2572f2ff8c8064a868775ce4ef6901, type: 3}
       propertyPath: m_Name
-      value: dog (1)
+      value: dog
       objectReference: {fileID: 0}
     - target: {fileID: 9215267621966477252, guid: 5b2572f2ff8c8064a868775ce4ef6901, type: 3}
       propertyPath: m_Enabled
@@ -1904,7 +1904,7 @@ GameObject:
   - component: {fileID: 890813638}
   - component: {fileID: 890813637}
   m_Layer: 0
-  m_Name: EventSystem (1)
+  m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1981,7 +1981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928577267}
   m_Layer: 0
-  m_Name: Lightning (1)
+  m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2233,7 +2233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1706491856171917110, guid: 5656d270c0e21964b9d1028598dc4229, type: 3}
       propertyPath: m_Name
-      value: Room (1)
+      value: Room
       objectReference: {fileID: 0}
     - target: {fileID: 2222590844797812854, guid: 5656d270c0e21964b9d1028598dc4229, type: 3}
       propertyPath: m_LocalScale.x
@@ -2911,7 +2911,7 @@ GameObject:
   - component: {fileID: 1260140401}
   - component: {fileID: 1260140400}
   m_Layer: 0
-  m_Name: Snow (1)
+  m_Name: Snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4119,7 +4119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 862232505324774901, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2448048473666517451, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
       propertyPath: m_Enabled
@@ -4399,12 +4399,12 @@ LightProbeGroup:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1586157811}
   - {fileID: 890813639}
   - {fileID: 941521504}
   - {fileID: 1868845546}
   - {fileID: 1260140402}
   - {fileID: 1129957956}
-  - {fileID: 1586157811}
   - {fileID: 1757355815}
   - {fileID: 928577267}
   - {fileID: 56563601}

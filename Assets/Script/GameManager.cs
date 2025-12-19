@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.PlayGameBGM();
         EnablePlayer();
     }
 
