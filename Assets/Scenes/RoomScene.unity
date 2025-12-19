@@ -1051,40 +1051,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 171.759
       objectReference: {fileID: 0}
+    - target: {fileID: 6662711420696054776, guid: 104ae624bb5b51d4c8ecfbf69bb56e12, type: 3}
+      propertyPath: bookCountText
+      value: 
+      objectReference: {fileID: 981199049}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1331255003451078752, guid: 104ae624bb5b51d4c8ecfbf69bb56e12, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 265593554}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104ae624bb5b51d4c8ecfbf69bb56e12, type: 3}
 --- !u!4 &265593552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2848139547686438492, guid: 104ae624bb5b51d4c8ecfbf69bb56e12, type: 3}
   m_PrefabInstance: {fileID: 265593551}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &265593553 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1331255003451078752, guid: 104ae624bb5b51d4c8ecfbf69bb56e12, type: 3}
-  m_PrefabInstance: {fileID: 265593551}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &265593554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 265593553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 981199049}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &276715418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,142 +1420,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332337928}
-  m_CullTransparentMesh: 1
---- !u!1 &338138834
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 338138835}
-  - component: {fileID: 338138837}
-  - component: {fileID: 338138836}
-  m_Layer: 5
-  m_Name: TransitionText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &338138835
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338138834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1806965354}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.3262, y: -0.8428}
-  m_SizeDelta: {x: 248.6524, y: 51.6856}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &338138836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338138834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Going to Santa's Area...
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6f2ee57e124e12d46a5c77adfd6ff2ca, type: 2}
-  m_sharedMaterial: {fileID: -6531762103908807032, guid: 6f2ee57e124e12d46a5c77adfd6ff2ca, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &338138837
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338138834}
   m_CullTransparentMesh: 1
 --- !u!1 &382921387
 GameObject:
@@ -2346,6 +2190,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1253941544}
     m_Modifications:
+    - target: {fileID: 1456796903257013503, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
+      propertyPath: bookCountText
+      value: 
+      objectReference: {fileID: 981199049}
     - target: {fileID: 3744900168085680435, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.36562
@@ -2393,37 +2241,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6203253123535827630, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 672406945}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
 --- !u!4 &672406943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3744900168085680435, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
   m_PrefabInstance: {fileID: 672406942}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &672406944 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6203253123535827630, guid: 240e3bedab4f69a459de8825296d83f8, type: 3}
-  m_PrefabInstance: {fileID: 672406942}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &672406945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672406944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 981199049}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &679467527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3221,6 +3045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8386908536429715156, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
+      propertyPath: bookCountText
+      value: 
+      objectReference: {fileID: 981199049}
     - target: {fileID: 8629696376780583289, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.51032025
@@ -3264,37 +3092,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1177386386556385320, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 869258102}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
 --- !u!4 &869258100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8629696376780583289, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
   m_PrefabInstance: {fileID: 869258099}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &869258101 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1177386386556385320, guid: e24a6859a1afd1e40b1f7550a5b95327, type: 3}
-  m_PrefabInstance: {fileID: 869258099}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &869258102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869258101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 981199049}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &919805895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,7 +3629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2448048473666517451, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2448048473666517451, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
       propertyPath: cameraTransform
@@ -3834,7 +3638,7 @@ PrefabInstance:
     - target: {fileID: 2448048473666517451, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
       propertyPath: flashlightImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 77368020}
     - target: {fileID: 4514054496688238305, guid: 46dd94f8810652248bd52704dff969bd, type: 3}
       propertyPath: audioSource
       value: 
@@ -4010,6 +3814,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8420156571774696287, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
+      propertyPath: bookCountText
+      value: 
+      objectReference: {fileID: 981199049}
     - target: {fileID: 8562263648292238640, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.70032007
@@ -4053,37 +3861,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7435322540085385402, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1015343263}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
 --- !u!4 &1015343261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8562263648292238640, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
   m_PrefabInstance: {fileID: 1015343260}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1015343262 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7435322540085385402, guid: 2c200631e73e33b4aada89fe8f07dda6, type: 3}
-  m_PrefabInstance: {fileID: 1015343260}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1015343263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015343262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 981199049}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1027105846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4397,6 +4181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1253941544}
     m_Modifications:
+    - target: {fileID: 523796521740509894, guid: b77fb16638f2d314ea5e0d0f315f3caa, type: 3}
+      propertyPath: bookCountText
+      value: 
+      objectReference: {fileID: 981199049}
     - target: {fileID: 4776211210057935421, guid: b77fb16638f2d314ea5e0d0f315f3caa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.54561996
@@ -4444,37 +4232,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6328340022898616118, guid: b77fb16638f2d314ea5e0d0f315f3caa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1120775184}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b77fb16638f2d314ea5e0d0f315f3caa, type: 3}
 --- !u!4 &1120775182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4776211210057935421, guid: b77fb16638f2d314ea5e0d0f315f3caa, type: 3}
   m_PrefabInstance: {fileID: 1120775181}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1120775183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6328340022898616118, guid: b77fb16638f2d314ea5e0d0f315f3caa, type: 3}
-  m_PrefabInstance: {fileID: 1120775181}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1120775184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120775183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 981199049}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1001 &1135855198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5383,40 +5147,169 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 8589198872936134108, guid: badf434b398425d409c33366d6cfa511, type: 3}
+      propertyPath: bookCountText
+      value: 
+      objectReference: {fileID: 981199049}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 981898177430354236, guid: badf434b398425d409c33366d6cfa511, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1603086710}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: badf434b398425d409c33366d6cfa511, type: 3}
 --- !u!4 &1603086708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7623127298917334301, guid: badf434b398425d409c33366d6cfa511, type: 3}
   m_PrefabInstance: {fileID: 1603086707}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1603086709 stripped
+--- !u!1 &1631755596
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 981898177430354236, guid: badf434b398425d409c33366d6cfa511, type: 3}
-  m_PrefabInstance: {fileID: 1603086707}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1603086710
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631755597}
+  - component: {fileID: 1631755601}
+  - component: {fileID: 1631755600}
+  - component: {fileID: 1631755599}
+  m_Layer: 5
+  m_Name: TransitionText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1631755597
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631755596}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1806965354}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 24.326141, y: -0.8427887}
+  m_SizeDelta: {x: 248.6524, y: 51.6856}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1631755599
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631755596}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &1631755600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603086709}
+  m_GameObject: {fileID: 1631755596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 981199049}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Going to Santa's Area...
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 6f2ee57e124e12d46a5c77adfd6ff2ca, type: 2}
+  m_sharedMaterial: {fileID: -6531762103908807032, guid: 6f2ee57e124e12d46a5c77adfd6ff2ca, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1631755601
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631755596}
+  m_CullTransparentMesh: 1
 --- !u!1 &1683779102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5919120999964489834, guid: 416c9f366e78a2c4ea31a9112f98e68a, type: 3}
@@ -5457,6 +5350,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1253941544}
     m_Modifications:
+    - target: {fileID: 154593861241286802, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
+      propertyPath: bookCountText
+      value: 
+      objectReference: {fileID: 981199049}
     - target: {fileID: 4318292403320410028, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07038
@@ -5504,37 +5401,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7026325396102275679, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1769937873}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
 --- !u!4 &1769937871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4318292403320410028, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
   m_PrefabInstance: {fileID: 1769937870}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1769937872 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7026325396102275679, guid: 8909bc8bc8b1bc64f9f3ff3034e0d97d, type: 3}
-  m_PrefabInstance: {fileID: 1769937870}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1769937873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769937872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Book
-  maxBooks: 8
-  bookCountText: {fileID: 981199049}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1771947736
 GameObject:
   m_ObjectHideFlags: 0
@@ -5818,7 +5691,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 591889279}
-  - {fileID: 338138835}
+  - {fileID: 1631755597}
   m_Father: {fileID: 3710887080693129365}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6361,6 +6234,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assets
       objectReference: {fileID: 0}
+    - target: {fileID: 2505624081413455829, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
+      propertyPath: fadeCanvas
+      value: 
+      objectReference: {fileID: 591889280}
+    - target: {fileID: 2505624081413455829, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
+      propertyPath: textCanvas
+      value: 
+      objectReference: {fileID: 1631755599}
     - target: {fileID: 2669553868088583751, guid: e38fd861b2d6b994e86f9050491c700b, type: 3}
       propertyPath: bottleCountText
       value: 
