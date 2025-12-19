@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7778158021404795984}
   - component: {fileID: 7478745001978230423}
   - component: {fileID: 8014467250578399379}
-  m_Layer: 0
+  - component: {fileID: 1456796903257013503}
+  m_Layer: 6
   m_Name: Book 4
-  m_TagString: Untagged
+  m_TagString: Book
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -111,3 +112,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17163852, y: 0.020000063, z: 0.24529035}
   m_Center: {x: 0, y: 0.01, z: 0}
+--- !u!114 &1456796903257013503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203253123535827630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a6e06d350691e408cc5c23ba9a96e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Book
+  maxBooks: 8
+  bookCountText: {fileID: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  maxColor: {r: 0, g: 1, b: 0, a: 1}
