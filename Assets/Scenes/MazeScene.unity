@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 2
-  m_FogDensity: 1
+  m_FogDensity: 0.7
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.060555365, g: 0.078924894, b: 0.10188681, a: 1}
@@ -23894,18 +23894,31 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9176488995003972906, guid: 8f59f7c10e5623a4eb31c5fa30cf597d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176488995003972906, guid: 8f59f7c10e5623a4eb31c5fa30cf597d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176488995003972906, guid: 8f59f7c10e5623a4eb31c5fa30cf597d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176488995003972906, guid: 8f59f7c10e5623a4eb31c5fa30cf597d, type: 3}
       propertyPath: m_Intensity
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9176488995003972906, guid: 8f59f7c10e5623a4eb31c5fa30cf597d, type: 3}
       propertyPath: m_SpotAngle
-      value: 81.42021
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9176488995003972906, guid: 8f59f7c10e5623a4eb31c5fa30cf597d, type: 3}
       propertyPath: m_InnerSpotAngle
-      value: 40
+      value: 45
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4198017710588878581, guid: 8f59f7c10e5623a4eb31c5fa30cf597d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
