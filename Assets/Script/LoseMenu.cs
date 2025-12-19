@@ -21,6 +21,7 @@ public class LoseMenu : MonoBehaviour
         playerController.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        PlayGameOverSound();
     }
 
     IEnumerator FadeIn()
@@ -58,5 +59,10 @@ public class LoseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
+    }
+
+    public void PlayGameOverSound()
+    {
+        AudioManager.instance.PlayGameOverSound();
     }
 }
