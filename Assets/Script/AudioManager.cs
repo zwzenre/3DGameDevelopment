@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip pipeSFX;
     public AudioClip walkingSFX;
     public AudioClip walkingOnSnowSFX;
+    public AudioClip dogBark;
 
     private void Awake()
     {
@@ -101,5 +102,10 @@ public class AudioManager : MonoBehaviour
     public void PlayWalkingOnSnowSound()
     {
         PlaySFX(walkingOnSnowSFX);
+    }
+
+    public void PlayDogBarkSound()
+    {
+        PlaySFX(dogBark);
     }
 }

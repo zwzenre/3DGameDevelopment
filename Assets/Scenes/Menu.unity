@@ -4112,6 +4112,10 @@ PrefabInstance:
       value: Audio Manager
       objectReference: {fileID: 0}
     - target: {fileID: 4338060786505975693, guid: 0dc68aa36f5735b4d8b34bc3bb7b983a, type: 3}
+      propertyPath: dogBark
+      value: 
+      objectReference: {fileID: 8300000, guid: d04f90d1e5591e741a4d407ffba8af1d, type: 3}
+    - target: {fileID: 4338060786505975693, guid: 0dc68aa36f5735b4d8b34bc3bb7b983a, type: 3}
       propertyPath: gameBGM
       value: 
       objectReference: {fileID: 8300000, guid: 13d8afdae5eb28e4db340b00aca3166a, type: 3}
@@ -4132,9 +4136,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 4eb881b2edf89604aacced14fa475232, type: 3}
     - target: {fileID: 4338060786505975693, guid: 0dc68aa36f5735b4d8b34bc3bb7b983a, type: 3}
+      propertyPath: gameWinSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: c16ef36cbe377c54c95422192a28cb1d, type: 3}
+    - target: {fileID: 4338060786505975693, guid: 0dc68aa36f5735b4d8b34bc3bb7b983a, type: 3}
       propertyPath: walkingSFX
       value: 
       objectReference: {fileID: 8300000, guid: 2a839a75abb3e394a8c60cf56d1d066d, type: 3}
+    - target: {fileID: 4338060786505975693, guid: 0dc68aa36f5735b4d8b34bc3bb7b983a, type: 3}
+      propertyPath: gameOverSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 132ff9c45a845074c867724beb48a5b5, type: 3}
     - target: {fileID: 4338060786505975693, guid: 0dc68aa36f5735b4d8b34bc3bb7b983a, type: 3}
       propertyPath: interactSFX
       value: 
