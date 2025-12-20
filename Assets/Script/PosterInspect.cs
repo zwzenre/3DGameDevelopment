@@ -4,6 +4,7 @@ using StarterAssets;
 public class PosterInspect : MonoBehaviour
 {
     public GameObject posterUI;  
+    public GameObject interactIcon;
     public PlayerController playerController;
 
     private bool isOpen = false;
@@ -28,7 +29,7 @@ public class PosterInspect : MonoBehaviour
         playerController.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        
+        interactIcon.SetActive(false);
     }
 
     void ClosePoster()
@@ -38,5 +39,6 @@ public class PosterInspect : MonoBehaviour
         playerController.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        interactIcon.SetActive(true);
     }
 }
