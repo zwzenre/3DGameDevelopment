@@ -56,6 +56,6 @@ public class WinMenu : MonoBehaviour
 
     void PlayWinSound()
     {
-        AudioManager.instance.PlayGameBGM(); // or PlayWinSound() if you have one
+        AudioManager.instance.PlayGameWinSound();
     }
 }
