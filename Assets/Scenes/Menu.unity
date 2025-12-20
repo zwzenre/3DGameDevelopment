@@ -4595,15 +4595,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1312051476703941085, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1312051476703941085, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1312051476703941085, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1384379583172519634, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_Pivot.x
@@ -4687,55 +4687,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2306914568697432164, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2306914568697432164, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2306914568697432164, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2483220763542584061, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2483220763542584061, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5217801872531849849, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5217801872531849849, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5689960277641060788, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5689960277641060788, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5689960277641060788, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6985971627180394700, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6985971627180394700, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7315851257938140721, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
       propertyPath: m_Name
       value: Pause Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315851257938140721, guid: 8a9b0cea846150a41aceff1774809098, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
