@@ -1,35 +1,40 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class CutScene : MonoBehaviour
 {
-    [Header("Timeline")]
+    public enum CutsceneType
+    {
+        Intro,
+        Ending
+    }
+
+    public CutsceneType cutsceneType;
+
     public PlayableDirector playableDirector;
 
-    [Header("Fade")]
     public Image fadeImage;
     public float fadeDuration = 1f;
 
-    [Header("Win Menu")]
-    public WinMenu winMenu;
+    public string sceneToLoad;   // used only for Intro cutscene
+
+    public WinMenu winMenu;      // used only for Ending cutscene
+
+    public GameObject skipHintUI;
 
     private bool hasEnded = false;
     private bool isSkipping = false;
-    public GameObject skipHintUI;
 
     void Start()
     {
         AudioManager.instance.PlayGameBGM();
 
-        // Start fully black
         fadeImage.color = new Color(0, 0, 0, 1f);
-
-        // Fade in
         StartCoroutine(FadeIn());
 
-        // Listen for timeline end
         if (playableDirector != null)
         {
             playableDirector.stopped += OnTimelineEnd;
@@ -41,8 +46,7 @@ public class CutScene : MonoBehaviour
     {
         if (hasEnded) return;
 
-        // SPACE to skip cutscene
-        if (Input.GetKeyDown(KeyCode.Space) && !hasEnded && !isSkipping)
+        if (Input.GetKeyDown(KeyCode.Space) && !isSkipping)
         {
             SkipCutscene();
         }
@@ -51,17 +55,7 @@ public class CutScene : MonoBehaviour
     void OnDestroy()
     {
         if (playableDirector != null)
-        {
             playableDirector.stopped -= OnTimelineEnd;
-        }
-    }
-
-    void OnTimelineEnd(PlayableDirector director)
-    {
-        if (hasEnded) return;
-        hasEnded = true;
-
-        StartCoroutine(FadeOutAndShowWinMenu());
     }
 
     void SkipCutscene()
@@ -71,38 +65,39 @@ public class CutScene : MonoBehaviour
         if (playableDirector != null)
             playableDirector.Stop();
 
-        StartCoroutine(FadeOutAndShowWinMenu());
+        StartCoroutine(EndCutsceneFlow());
+    }
+
+    void OnTimelineEnd(PlayableDirector director)
+    {
+        if (hasEnded) return;
+        StartCoroutine(EndCutsceneFlow());
     }
 
     IEnumerator FadeIn()
     {
-        float elapsed = 0f;
-
-        while (elapsed < fadeDuration)
+        float t = 0f;
+        while (t < fadeDuration)
         {
-            elapsed += Time.deltaTime;
-            float alpha = Mathf.Lerp(1f, 0f, elapsed / fadeDuration);
-            fadeImage.color = new Color(0, 0, 0, alpha);
+            t += Time.deltaTime;
+            fadeImage.color = new Color(0, 0, 0, Mathf.Lerp(1f, 0f, t / fadeDuration));
             yield return null;
         }
-
         fadeImage.color = new Color(0, 0, 0, 0f);
     }
 
-    IEnumerator FadeOutAndShowWinMenu()
+    IEnumerator EndCutsceneFlow()
     {
         hasEnded = true;
 
         if (skipHintUI != null)
             skipHintUI.SetActive(false);
-        
-        float elapsed = 0f;
 
-        while (elapsed < fadeDuration)
+        float t = 0f;
+        while (t < fadeDuration)
         {
-            elapsed += Time.deltaTime;
-            float alpha = Mathf.Lerp(0f, 1f, elapsed / fadeDuration);
-            fadeImage.color = new Color(0, 0, 0, alpha);
+            t += Time.deltaTime;
+            fadeImage.color = new Color(0, 0, 0, Mathf.Lerp(0f, 1f, t / fadeDuration));
             yield return null;
         }
 
@@ -110,9 +105,15 @@ public class CutScene : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.3f);
 
-        if (winMenu != null)
+        // 🔀 BRANCH HERE
+        if (cutsceneType == CutsceneType.Intro)
         {
-            winMenu.ShowWinMenu();
+            SceneManager.LoadScene(sceneToLoad);
+        }
+        else if (cutsceneType == CutsceneType.Ending)
+        {
+            if (winMenu != null)
+                winMenu.ShowWinMenu();
         }
     }
 }
