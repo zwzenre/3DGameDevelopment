@@ -21810,7 +21810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4124377280378174465, guid: 416c9f366e78a2c4ea31a9112f98e68a, type: 3}
       propertyPath: mazeTask
-      value: 'Find pipes through out the maze and fix the pipe system  '
+      value: 'Look for decorations to find pipes and fix the pipe system  '
       objectReference: {fileID: 0}
     - target: {fileID: 4619308180683834713, guid: 416c9f366e78a2c4ea31a9112f98e68a, type: 3}
       propertyPath: m_AnchorMax.y

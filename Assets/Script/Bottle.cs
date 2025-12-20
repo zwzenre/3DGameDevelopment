@@ -3,7 +3,7 @@ using TMPro;
 
 public class Bottle : MonoBehaviour
 {
-    public int maxBottles = 5;
+    public int maxBottles = 6;
 
     public TMP_Text bottleCountText;
     public Color normalColor = Color.white;
