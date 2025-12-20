@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class WaterManager : MonoBehaviour
 {
     public static WaterManager instance;
+    public PlayerController playerController;
 
     public GameObject waterLeakEffect;   // Already placed in scene
     public GameObject waterBeamEffect;
@@ -39,6 +42,10 @@ public class WaterManager : MonoBehaviour
         {
             waterLeakEffect.SetActive(false); // Hide leak
             waterBeamEffect.SetActive(true);  // Enable fountain water
+
+            playerController.enabled = false;
+
+            StartCoroutine(FadeAndLoadEnd());
             return;
         }
 
@@ -52,5 +59,15 @@ public class WaterManager : MonoBehaviour
         waterLeakEffect.transform.position = slot.leakPoint.position;
         waterLeakEffect.transform.rotation = slot.leakPoint.rotation;
         waterLeakEffect.SetActive(true);
+    }
+
+    IEnumerator FadeAndLoadEnd()
+    {
+        yield return new WaitForSeconds(1f); 
+
+        if (MazeFadeController.instance != null)
+            yield return MazeFadeController.instance.FadeOut();
+
+        SceneManager.LoadScene("EndScene"); 
     }
 }
