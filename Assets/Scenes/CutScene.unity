@@ -3931,11 +3931,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8fe0a9697ecd848be83a86f1887ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  playableDirector: {fileID: 0}
+  cutsceneType: 0
+  playableDirector: {fileID: 1129957955}
   fadeImage: {fileID: 1133607755}
   fadeDuration: 1
+  sceneToLoad: RoomScene
   winMenu: {fileID: 0}
-  skipHintUI: {fileID: 155063874}
+  skipHintUI: {fileID: 0}
 --- !u!4 &1586157811
 Transform:
   m_ObjectHideFlags: 0
@@ -4596,18 +4598,6 @@ PrefabInstance:
     - target: {fileID: 1709556692078068394, guid: 2bd81cfb2789d2548b93903a3659322d, type: 3}
       propertyPath: m_SizeDelta.y
       value: 505
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709556692078068394, guid: 2bd81cfb2789d2548b93903a3659322d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709556692078068394, guid: 2bd81cfb2789d2548b93903a3659322d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709556692078068394, guid: 2bd81cfb2789d2548b93903a3659322d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1709556692078068394, guid: 2bd81cfb2789d2548b93903a3659322d, type: 3}
       propertyPath: m_LocalPosition.x
