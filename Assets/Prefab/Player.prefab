@@ -142,8 +142,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5450526443423814944, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
+      propertyPath: m_Name
+      value: Body
+      objectReference: {fileID: 0}
+    - target: {fileID: -5450526443423814944, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 729690222700195083, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
+      propertyPath: m_Name
+      value: Hips
       objectReference: {fileID: 0}
     - target: {fileID: 729690222700195083, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
       propertyPath: m_TagString
