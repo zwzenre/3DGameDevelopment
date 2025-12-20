@@ -40590,7 +40590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6451085404344732339, guid: d57212e3f523e134b88c84664362ce02, type: 3}
       propertyPath: m_Name
-      value: Bag_Gift_Christmas_B (1)
+      value: Bag_Gift_Christmas_B
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
