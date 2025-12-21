@@ -143,7 +143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5450526443423814944, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
       propertyPath: m_Name
-      value: Body
+      value: Ch09
       objectReference: {fileID: 0}
     - target: {fileID: -5450526443423814944, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
       propertyPath: m_TagString
@@ -151,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 729690222700195083, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
       propertyPath: m_Name
-      value: Hips
+      value: mixamorig6:Hips
       objectReference: {fileID: 0}
     - target: {fileID: 729690222700195083, guid: 13233671d807f7148ad6aa1069d76657, type: 3}
       propertyPath: m_TagString
